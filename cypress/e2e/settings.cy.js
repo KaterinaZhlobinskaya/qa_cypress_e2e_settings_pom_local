@@ -20,7 +20,7 @@ describe('Settings page', () => {
     cy.task('generateUser').then((generateUser) => {
       user = generateUser;
       signInPage.visit();
-      cy.register(user.email, user.username, user.password);
+      cy.login(user.email, user.username, user.password);
 
       signInPage.typeEmail(user.email);
       signInPage.typePassword(user.password);
